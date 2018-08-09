@@ -1,0 +1,52 @@
+<div class="register-page">
+<md-content layout="row" layout-align="space-around" layout-padding="layout-padding" class="register-form">
+  <md-card flex="flex" flex-gt-sm="50" flex-gt-md="33">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2><span>Register Form</span></h2>
+      </div>
+    </md-toolbar>
+    <md-card-content>
+      <form name="registerForm">
+        <md-input-container class="md-block">
+          <label>Name</label>
+          <input type="text" name="name" ng-model="username" placeholder="Enter name" required/>
+          <div ng-messages="registerForm.name.$error">
+            <div ng-message="required">Name Required</div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label>Login</label>
+          <input type="text" name="email" ng-model="useremail" placeholder="Enter email" ng-pattern="/^\w[^_]+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/" required/>
+          <div ng-messages="loginForm.email.$error">
+            <div ng-message="required">Emailid Required</div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label>Password</label>
+          <input type="password" ng-change="comparePassword(password,useremail)" name="password" ng-model="password" placeholder="password" required minLength="6" maxlength="16" />
+          <div ng-messages="loginForm.password.$error">
+            <div ng-message="required">Password Required(min length:06, maxlength:16)</div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label>City</label>
+          <input type="text" name="city" ng-model="usercity" placeholder="Enter city" required/>
+          <div ng-messages="registerForm.city.$error">
+            <div ng-message="required">City Required</div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label>Role</label>
+          <input type="text" name="role" ng-model="userrole" placeholder="Enter role" required/>
+          <div ng-messages="registerForm.name.$error">
+            <div ng-message="required">Role Required</div>
+          </div>
+        </md-input-container>
+        <md-button ng-disabled="!registerForm.$valid" ng-click="submit() " class="md-raised md-primary ">&nbsp Login &nbsp
+        </md-button>
+      </form>
+    </md-card-content>
+  </md-card>
+</md-content>
+</div>

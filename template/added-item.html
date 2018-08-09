@@ -1,0 +1,22 @@
+<md-dialog aria-lable="Mobile">
+  <md-dialog-content>
+    <div class="md-dialog-content cart-content">
+      <h3 style="border-bottom: 1px solid grey;padding-bottom: 14px;">List of added items</h3>
+      <div ng-repeat="item in data | removeDuplicateFilter">
+        <div class="cart-data">
+          <div class="img">
+            <img ng-src={{item.image.small}} class="cart-img">
+          </div>
+          <div class="cart-info">
+            <h4>{{item.name}}</h4>
+            <h4>Quantity: {{item | quantityFilter: data}}</h4>
+            <h4 style="color: lightsalmon;">Price: ${{item.price}}</h4>
+          </div>
+        </div>
+      </div>
+      <div ng-if="!data.length">
+        <h5>Item not added, please go and add items to cart</h5>
+      </div>
+    </div>
+  </md-dialog-content>
+</md-dialog>

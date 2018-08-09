@@ -1,0 +1,150 @@
+.cart-data {
+  display: flex;
+  border-bottom: 1px solid gray;
+}
+
+.cart-content {
+  width: 360px;
+  text-align: left;
+}
+
+/* .cart-img {
+  height: 50px;
+  width: 40px;
+} */
+
+.cart-info {
+  padding-left: 41px;
+  margin-top: -10px;
+}
+
+.cart-img {
+  height: 121px;
+  width: 145px;
+}
+
+.add-item {
+  position: absolute;
+  right: 100px;
+  top: 0;
+  background-color: red;
+  padding: 1px;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+.rating {
+  padding: 5px 0px;
+  display: flex;
+}
+
+.rating-label {
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.login-page {
+  height: 100%;
+  width: 100%;
+  background-image: url('../assets/images/d.jpg');
+}
+.register-page{
+  height: 100%;
+  width: 100%;
+  background-image: url('../assets/images/d.jpg');
+}
+
+.userverify-page{
+  height: 100%;
+  width: 100%;
+  background-image: url('../assets/images/d.jpg');
+}
+
+.resetpassword-page{
+  height: 100%;
+  width: 100%;
+  background-image: url('../assets/images/d.jpg');
+}
+.login-form {
+  background-image: url('../assets/images/d.jpg');
+  padding-top: 60px;
+}
+.register-form{
+  background-image: url('../assets/images/d.jpg');
+  padding-top: 60px;
+}
+.userverify-form{
+  background-image: url('../assets/images/d.jpg');
+  padding-top: 60px;
+}
+
+.resetpassword-form{
+  background-image: url('../assets/images/d.jpg');
+  padding-top: 60px;
+}
+.app-header {
+  position: fixed;
+  width: 100%;
+}
+
+.app-dashboard {
+  padding-top: 70px;
+}
+
+.card-data:hover {
+  box-shadow: 0 0 35px 0 #d8d8d8;
+  background-color: #e2e7e9;
+}
+
+.md-card-image {
+  padding: 20px;
+}
+
+.md-card-image:hover {
+  padding: 0px !important;
+}
+
+.card-info {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.resize {
+  margin-left: 300px;
+}
+
+.md-sidenav, .sideBarContent {
+  background-color: #2a3f54;
+  color: white;
+}
+
+.md-icon {
+  border-color: white !important;
+}
+
+.side-menu {
+  margin-left: 35px;
+}
+
+/* the entire scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* the track (progress bar) of the scrollbar. */
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* the draggable scrolling handle. */
+
+::-webkit-scrollbar-thumb {
+  background: #888
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: :#555;
+}

@@ -1,0 +1,24 @@
+<div class="userverify-page">
+<md-content layout="row" layout-align="space-around" layout-padding="layout-padding" class="userverify-form">
+  <md-card flex="flex" flex-gt-sm="50" flex-gt-md="33">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2><span>Enter Email and check your mail to Change Password</span></h2>
+      </div>
+    </md-toolbar>
+    <md-card-content>
+      <form name="userverifyForm">
+        <md-input-container class="md-block">
+          <label>Enter Email</label>
+          <input type="text" name="email" ng-model="useremail" placeholder="Enter email" ng-pattern="/^\w[^_]+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/" required/>
+          <div ng-messages="loginForm.email.$error">
+            <div ng-message="required">Emailid Required</div>
+          </div>
+        </md-input-container>
+        <md-button ng-disabled="!userverifyForm.$valid" ng-click="submit() " class="md-raised md-primary ">&nbsp Login &nbsp
+        </md-button>
+      </form>
+    </md-card-content>
+  </md-card>
+</md-content>
+</div>
