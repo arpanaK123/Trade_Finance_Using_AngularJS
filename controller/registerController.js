@@ -1,20 +1,27 @@
-app.controller('registerCtrl',function($scope, $state,UserService,toastr) {
+app.controller('registerCtrl',function($scope, $state,UserService,toastr,$location) {
   var baseURL = 'http://localhost:8080/tradeFinance/'
-  $scope.submit = function() {
-    $state.go('login');
-    console.log($scope.useremail);
-    console.log($scope.password);
+  // $scope.submit = function() {
+    //	$state.go('/login');
 
-  var userModel = ({
-    name: $scope.username,
-    email: $scope.useremail,
-    password: $scope.password,
-    city : $scope.usercity,
-    role : $scope.userrole
-  });
+//  console.log('userModel::--', userModel);
   var url=baseURL +"registration";
-  console.log(userModel);
-  UserService.registerPostData( userModel, url )
-  toastr.success('registration successfull plz check your mail to verify','register')
-}
+  $scope.submit=function(){
+    var userModel = {
+      name: $scope.username,
+      email: $scope.useremail,
+      password: $scope.password,
+      city : $scope.usercity,
+      role : $scope.userrole
+    }
+    console.log(userModel);
+  var register = UserService.registerPostData( userModel, url );
+  register.then(function(response) {
+  			toastr.success('registration successfull plz check mail to verify','registration');
+  			console.log('registerData:::--->',response);
+  			$location.path('/login');
+  		}, function(response) {
+  			console.log(response);
+  		});
+    }
+// }
 });

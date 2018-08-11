@@ -1,17 +1,20 @@
-app.controller('loginCtrl', function($scope, $state,UserService,toastr) {
+app.controller('loginCtrl', function($scope, $state, $location, UserService, toastr) {
   var baseURL = 'http://localhost:8080/tradeFinance/'
+  var url = baseURL + "login";
   $scope.submit = function() {
-    $state.go('home.dashBoard');
-    console.log($scope.useremail);
-    console.log($scope.password);
-
-    var userModel = ({
+    var userModel = {
       email: $scope.useremail,
-      password: $scope.password,
-    });
-    var url=baseURL +"login";
+      password: $scope.password
+    }
     console.log(userModel);
-    UserService.loginMethodPost( userModel, url )
-    toastr.success('login successfull','login')
+    var login = UserService.loginMethodPost(userModel, url);
+    login.then(function fcg(response) {
+      console.log(response.data.status);
+        $location.path('/home');
+     toastr.success('login successfully', 'user');
+    },function tgfuy(res){
+      console.log(res);
+      toastr.error('user is not active', 'user');
+    });
   };
 });
