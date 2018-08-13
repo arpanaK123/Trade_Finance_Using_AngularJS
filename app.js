@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ui.router', 'ngMaterial','toastr','ui.router']);
+var app = angular.module('app', ['ui.router', 'ngMaterial','toastr']);
 
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -24,14 +24,9 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
       controller: 'homeCtrl'
     })
     .state('resetPassword', {
-      url: '/resetPassword/:key',
+      url: '/resetPassword/:id',
       templateUrl: 'template/resetpassword.html',
-      controller: 'resetpasswordCtrl',
-      // resolve: {
-			// 	resolveId: function($stateParams) {
-			// 		return $stateParams.key;
-			// 	}
-			// }
+      controller: 'resetpasswordCtrl'
     })
     .state('home.dashBoard', {
       url: '/dashBoard',
