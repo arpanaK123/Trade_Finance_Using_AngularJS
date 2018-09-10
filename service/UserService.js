@@ -14,7 +14,8 @@ app.factory('UserService', function($http) {
   	}
 
     serviceobj.loginMethodPost = function(data,url) {
-      console.log(data);
+      //console.log(data);
+     // console.log(response.data);
       return $http({
         method : "POST",
         headers:{

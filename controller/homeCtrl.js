@@ -1,4 +1,5 @@
 app.controller('homeCtrl', function($scope, $state, $mdSidenav, products, $mdDialog) {
+  console.log("------------------");
   // $scope.showItems = function(event, info) {
   //   $mdDialog.show({
   //     locals: {

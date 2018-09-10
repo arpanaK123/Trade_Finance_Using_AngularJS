@@ -10,6 +10,9 @@ app.controller('registerCtrl',function($scope, $state,UserService,toastr,$locati
       name: $scope.username,
       email: $scope.useremail,
       password: $scope.password,
+      bankname: $scope.bankname,
+      accountnumber: $scope.accountnumber,
+      balance: $scope.balance,
       city : $scope.usercity,
       role : $scope.userrole
     }

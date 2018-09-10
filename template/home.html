@@ -9,6 +9,31 @@
     <ui-view></ui-view>
   </div>
 </div> -->
-<!-- <h1>
-  <center> Welcome to Trade_Finance </center>
-</h1> -->
+<div class="app-body">
+<div class="side-bar">
+    <sideBar></sideBar>
+  </div>
+<div  class="app-dashboard">
+    <ui-view></ui-view>
+  <h1>
+  <h3 color="blue">Exporter Details</h3> 
+      <!-- <md-icon md-svg-icon="bower_components/material-design-icons/action/svg/design/carrt.svg">  -->
+        <md-button  ng-click="submit()" class="md-raised md-primary ">&nbsp VIEW &nbsp
+        </md-button>
+  </h1>
+</div>
+<div>
+<h3>Create Contract</h3>
+<md-button  ng-click="submit()" class="md-raised md-primary ">&nbsp CREATE &nbsp
+</md-button>
+</div>
+</div>
+<br>
+<div>
+  <!-- <h4>Upload File</h5> -->
+<!-- <md-icon md-svg-icon="bower_components/material-design-icons/action/svg/design/ic_swap_vert_48px.svg">   -->
+  <md-button  ng-click="submit()" class="md-raised md-primary ">&nbsp Upload File &nbsp
+    </md-button>
+    <md-button  ng-click="submit()" class="md-raised md-primary ">&nbsp Upload File &nbsp
+      </md-button>
+</div>

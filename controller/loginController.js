@@ -8,11 +8,13 @@ app.controller('loginCtrl', function($scope, $state, $location, UserService, toa
     }
     console.log(userModel);
     var login = UserService.loginMethodPost(userModel, url);
-    login.then(function fcg(response) {
+    login.then(function functions(response) {
       console.log(response.data.status);
+      console.log("login data:--------"+response.data.userModel);
+console.log("----"+response.user)
         $location.path('/home');
      toastr.success('login successfully', 'user');
-    },function tgfuy(res){
+    },function result(res){
       console.log(res);
       toastr.error('user is not active', 'user');
     });

@@ -30,6 +30,27 @@
           </div>
         </md-input-container>
         <md-input-container class="md-block">
+          <label>Bank Name</label>
+          <input type="text" name="bankname" ng-model="bankname" placeholder="bankname" required/>
+          <div ng-messages="registerForm.bankname.$error">
+            <div ng-message="required">Bank Name Required</div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label> Account Number</label>
+          <input type="text" name="accountnumber" ng-model="accountnumber" placeholder="accountnumber" required/>
+          <div ng-messages="registerForm.accountnumber.$error">
+            <div ng-message="required">Account Number Required</div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label> Balance</label>
+          <input type="text" name="balance" ng-model="balance" placeholder="balance" required/>
+          <div ng-messages="registerForm.balance.$error">
+            <div ng-message="required">Balance Required</div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-block">
           <label>City</label>
           <input type="text" name="city" ng-model="usercity" placeholder="Enter city" required/>
           <div ng-messages="registerForm.city.$error">
