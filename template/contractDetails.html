@@ -1,0 +1,23 @@
+<div layout="row" layout-wrap layout-align="center">
+  <md-card ng-repeat="contractInfo in allContrcatInfo">
+    <md-card-content layout="column" layout-align="center center">
+      <div class="card-contractInfo">
+                <p>Contract_Id: ${{contractInfo.contractId}}</p>
+                <p>Content_Descr: {{contractInfo.contentDescription}}</p> 
+                <p>Contract_Money: {{contractInfo.contractMoney}}</p>
+                <p>Exporter_Id: {{contractInfo.exporterId}}</p>
+                <p>Importer_Id: {{contractInfo.importerId</p>
+                <p>Importer_Bank_Id: {{contractInfo.importerBankId</p>
+                <p>Insurance_Id: {{contractInfo.insuranceId</p>
+                <p>Custom_Id: {{contractInfo.customId</p>
+                <p>Port_Of_Loadin: {{contractInfo.portOfLoadin</p>
+                <p>Port_Of_Entry: {{contractInfo.portOfEntry</p>
+                <p>Exporter_Check: {{contractInfo.exporterCheck</p>
+                <p>Importer_Check: {{contractInfo.importerCheck</p>
+                <p>Importer_Bank_Check: {{contractInfo.importerBankCheck</p>
+                <p>Insurance_Check: {{contractInfo.insuranceCheck</p>
+                <p>Custom_Check: {{contractInfo.customCheck</p>
+      </div>
+    </md-card-content>
+  </md-card>
+</div>

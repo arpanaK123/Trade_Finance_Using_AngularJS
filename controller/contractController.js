@@ -6,7 +6,7 @@ app.controller('contractCtrl',function($scope, $state,UserService,toastr,$locati
   //  console.log('userModel::--', userModel);
     var url=baseURL +"createContractToken";
     $scope.submit=function(){
-      var userModel = {
+      var contractModel = {
         contractId: $scope.contractId,
         contentDescription: $scope.contentDescription,
         contractMoney: $scope.contractMoney,
@@ -23,12 +23,12 @@ app.controller('contractCtrl',function($scope, $state,UserService,toastr,$locati
         insuranceCheck: $scope.insuranceCheck,
         customCheck: $scope.customCheck
       }
-      console.log(userModel);
-    var register = UserService.registerPostData( userModel, url );
+      console.log(contractModel);
+    var register = UserService.createContract( contractModel, url );
     register.then(function(response) {
-                toastr.success('registration successfull plz check mail to verify','registration');
-                console.log('registerData:::--->',response);
-                $location.path('/login');
+                toastr.success('successfully created','contract');
+                console.log('contractData:::--->',response);
+                $location.path('/home');
             }, function(response) {
                 console.log(response);
             });

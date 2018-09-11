@@ -10,8 +10,11 @@ app.controller('loginCtrl', function($scope, $state, $location, UserService, toa
     var login = UserService.loginMethodPost(userModel, url);
     login.then(function functions(response) {
       console.log(response.data.status);
-      console.log("login data:--------"+response.data.userModel);
-console.log("----"+response.user)
+      console.log(response.data.statusCode);
+      $scope.alluserInfo = response;
+      console.log("alluserInfo--->"+$scope.alluserInfo);
+      console.log('JSON response: ', response);
+      console.log("Data response: -->"+response.data.usermodel.name);
         $location.path('/home');
      toastr.success('login successfully', 'user');
     },function result(res){

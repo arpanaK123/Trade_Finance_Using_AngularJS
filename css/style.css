@@ -54,7 +54,11 @@
   width: 100%;
   background-image: url('../assets/images/d.jpg');
 }
-
+.contract-page{
+  height: 100%;
+  width: 100%;
+  background-image: url('../assets/images/d.jpg');
+}
 .userverify-page{
   height: 100%;
   width: 100%;
@@ -71,6 +75,10 @@
   padding-top: 60px;
 }
 .register-form{
+  background-image: url('../assets/images/d.jpg');
+  padding-top: 60px;
+}
+.contract-form{
   background-image: url('../assets/images/d.jpg');
   padding-top: 60px;
 }

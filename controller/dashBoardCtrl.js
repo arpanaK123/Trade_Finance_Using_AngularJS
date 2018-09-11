@@ -6,8 +6,8 @@ app.controller('dashboardController', function($scope, $mdDialog) {
       },
       controller: dialogController,
       templateUrl: 'template/userDetailsDialogueBox.html',
-    //  parent: angular.element(document.body),
-    //  targetEvent: event,
+     parent: angular.element(document.body),
+     targetEvent: event,
       clickOutsideToClose: true,
     });
   };
