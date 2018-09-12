@@ -4,7 +4,7 @@ app.controller('contractCtrl',function($scope, $state,UserService,toastr,$locati
       //	$state.go('/login');
   
   //  console.log('userModel::--', userModel);
-    var url=baseURL +"createContractToken";
+    var url=baseURL +"createContract";
     $scope.submit=function(){
       var contractModel = {
         contractId: $scope.contractId,
@@ -28,6 +28,8 @@ app.controller('contractCtrl',function($scope, $state,UserService,toastr,$locati
     register.then(function(response) {
                 toastr.success('successfully created','contract');
                 console.log('contractData:::--->',response);
+                 localStorage.setItem('contractId',response.data.contractModel.contractId);
+                // localStorage.getItem('contractId')
                 $location.path('/home');
             }, function(response) {
                 console.log(response);

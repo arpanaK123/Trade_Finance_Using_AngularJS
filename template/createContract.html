@@ -64,6 +64,20 @@
                 <div ng-message="required">Custom_Id Required</div>
               </div>
             </md-input-container>
+            <md-input-container class="md-block">
+                <label>Enter Port_Of_Loadin</label>
+                <input type="text" name="portOfLoadin" ng-model="portOfLoadin" placeholder="enter portOfloading" required/>
+                <div ng-messages="contractForm.portOfLoadin.$error">
+                  <div ng-message="required">Port_Of_Loading Required</div>
+                </div>
+              </md-input-container>
+              <md-input-container class="md-block">
+                  <label>Enter Port_Of_Entry</label>
+                  <input type="text" name="portOfEntry" ng-model="portOfEntry" placeholder="enter port_of_entry" required/>
+                  <div ng-messages="contractForm.customId.$error">
+                    <div ng-message="required">Port_Of_Entry Required</div>
+                  </div>
+                </md-input-container>
             <md-button ng-disabled="!contractForm.$valid" ng-click="submit()" class="md-raised md-primary ">&nbsp CREATE &nbsp
             </md-button>
           </form>

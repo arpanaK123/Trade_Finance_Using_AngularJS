@@ -19,16 +19,28 @@
   </div>
 <div  class="app-dashboard">
     <ui-view></ui-view>
-  <h1>
-  <h3>Create Contract & View Contract</h3> 
+  
+  <h3></h3> 
   <a href="#!/createContract" class="btn btn-link">CREATE CONTRACT</a>
 
   <!-- <md-button  ng-click="submit()" class="md-raised md-primary ">&nbsp CREATE &nbsp</md-button> -->
-  <md-button  ng-click="submit()" class="md-raised md-primary ">&nbsp view all contract &nbsp
-  </md-button>
+  <!-- <md-button  ng-click="submit()" class="md-raised md-primary ">&nbsp view all contract &nbsp
+  </md-button> -->
   <!-- <md-button  ng-click="submit()" class="md-raised md-primary ">&nbsp VIEW &nbsp
         </md-button> -->
-  </h1>
+</div>
+<br>
+<div>
+    <md-button  ng-click="submit()" class="md-raised md-primary md-primary-left ">&nbsp view_all_Contract &nbsp
+      </md-button>
+</div>
+<br>
+<div>
+  <md-button  ng-click="submit()" class="md-raised md-primary ">&nbsp Current_Balance &nbsp</md-button>
+</div>
+<br>
+<div>
+  <md-button  ng-click="submit()" class="md-raised md-primary ">&nbsp Current_Transaction &nbsp</md-button>
 </div>
 <!-- <div>
 <h3>Create Contract</h3>
@@ -39,11 +51,47 @@
 </div>
 </div>
 <br> -->
-<div>
-  <h4>Upload File</h5>
-<!-- <md-icon md-svg-icon="bower_components/material-design-icons/action/svg/design/ic_swap_vert_48px.svg">   -->
-  <md-button  ng-click="submit()" class="md-raised md-primary ">&nbsp Upload File &nbsp
+<!-- <div> -->
+  <!-- <h4>Upload File</h5> -->
+   <!-- <md-icon md-svg-icon="bower_components/material-design-icons/action/svg/design/ic_swap_vert_48px.svg">   -->
+  <!-- <md-button  ng-click="submit()" class="md-raised md-primary ">&nbsp Upload File &nbsp -->
+    <!-- </md-button> -->
+    <!-- <md-button  ng-click="submit()" class="md-raised md-primary ">&nbsp Upload File &nbsp -->
+      <!-- </md-button> -->
+<!-- </div> -->
+<!-- <div>
+ <h5>Exporter</h5>
+  <md-icon md-svg-icon=" bower_components/material-design-icons/action/svg/design/ic_accessibility_48px.svg" />
+  <md-icon md-svg-icon="bower_components/material-design-icons/action/svg/design/ic_accessible_48px.svg"/>
+
+</div> -->
+<br></br>
+<br>
+<div layout="row">
+    <md-button class="md-primary md-fab md-fab-left">
+      exporter
     </md-button>
-    <md-button  ng-click="submit()" class="md-raised md-primary ">&nbsp Upload File &nbsp
-      </md-button>
-</div>
+    <md-button class="md-primary md-fab md-fab-left">
+      custom
+    </md-button>
+    <md-button class="md-primary md-fab md-fab-left">
+      insurance
+    </md-button>
+    <md-button class="md-primary md-fab md-fab-left">
+      importer
+    </md-button>
+    <md-button class="md-primary md-fab md-fab-left">
+      importer_Bank
+    </md-button>
+  </div>
+
+
+  <div class="container">
+      <ul class="progressbar">
+          <li class="active">exporter</li>
+          <li>custom</li>
+          <li>insurance</li>
+          <li>importer</li>
+          <li>importer_Bank</li>
+
+  </ul>

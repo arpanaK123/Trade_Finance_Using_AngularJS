@@ -57,10 +57,38 @@ app.factory('UserService', function($http) {
         method : "POST",
         headers:{
           "Content-Type":"application/json"
+         //Authorization: token
         },
         url : url,
         data:data
       })
     }
+
+    serviceobj.getBalanceBy = function(data,url) {
+      console.log(data);
+      return $http({
+        method : "POST",
+        headers:{
+          "Content-Type":"application/json"
+        },
+        url : url,
+        data:data
+      })
+    }
+
+    serviceobj.getContractBy = function(data,url) {
+      console.log(data);
+      return $http({
+        method : "POST",
+        headers:{
+          "Content-Type":"application/json"
+        },
+        url : url,
+        data:data
+      })
+    }
+
+
+
 return serviceobj;
 });

@@ -29,11 +29,22 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
       controller: 'resetpasswordCtrl'
     })
     .state('createContract', {
-      url: '/createContractToken',
+      url: '/createContract',
       templateUrl: 'template/createContract.html',
       controller: 'contractCtrl'
     })
-    
+
+     .state('getContractById', {
+      url: '/getContractBy',
+      templateUrl: 'template/getContractBy.html',
+      controller: 'contractCtrl'
+    })
+    .state('updateContractByToken', {
+      url: '/updateContractByToken',
+      templateUrl: 'template/updateContract.html',
+      controller: 'contractCtrl'
+    })
+
     .state('home.dashBoard', {
       url: '/dashBoard',
       templateUrl: 'template/dashBoard.html',

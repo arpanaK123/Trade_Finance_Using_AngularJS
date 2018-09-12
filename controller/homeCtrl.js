@@ -1,5 +1,10 @@
-app.controller('homeCtrl', function($scope, $state, $mdSidenav, products, $mdDialog) {
+app.controller('homeCtrl', function($scope, $state, UserService,$mdSidenav, products, $mdDialog) {
   console.log("------------------");
+
+  // $scope.data= JSON.parse(localStorage.getItem("data"));
+
+
+
   // $scope.showItems = function(event, info) {
   //   $mdDialog.show({
   //     locals: {
@@ -39,8 +44,17 @@ app.controller('homeCtrl', function($scope, $state, $mdSidenav, products, $mdDia
   $scope.onLogout = function() {
     $state.go('login');
   };
+  // var login = UserService.loginMethodPost(userModel, url);
+  // login.then(function functions(response) {
+  //   console.log(response.data.status);
+  //   console.log(response.data.statusCode);
+  //   $scope.alluserInfo = response;
+  //   console.log("alluserInfo--->"+$scope.alluserInfo);
+  //   console.log('JSON response: ', response);
+
+  // });
   // products.getData().then(function(response) {
-  //   $scope.allMobilesInfo = response;
+  //   $scope.alluserInfo = response;
   //   console.log('JSON response: ', response);
   // });
   //

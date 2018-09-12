@@ -1,0 +1,24 @@
+<div class="login-page">
+    <md-content layout="row" layout-align="space-around" layout-padding="layout-padding" class="login-form">
+      <md-card flex="flex" flex-gt-sm="50" flex-gt-md="33">
+        <md-toolbar>
+          <div class="md-toolbar-tools">
+            <h2><span>Get_Contract </span></h2>
+          </div>
+        </md-toolbar>
+        <md-card-content>
+          <form name="contractForm">
+            <md-input-container class="md-block">
+              <label>Enter Contract_Id</label>
+              <input type="text" name="contractId" ng-model="contractId" placeholder="Enter Contract_Id"required/>
+              <div ng-messages="contractForm.contractId.$error">
+                <div ng-message="required"> Required</div>
+              </div>
+            </md-input-container>
+            <md-button ng-disabled="!contractForm.$valid" ng-click="submit()" class="md-raised md-primary ">&nbsp View &nbsp
+            </md-button>
+          </form>
+        </md-card-content>
+      </md-card>
+    </md-content>
+    </div>

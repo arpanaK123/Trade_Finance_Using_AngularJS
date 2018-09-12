@@ -5,7 +5,7 @@ app.controller('dashboardController', function($scope, $mdDialog) {
         data: info
       },
       controller: dialogController,
-      templateUrl: 'template/userDetailsDialogueBox.html',
+      templateUrl: 'template/userDetails.html',
      parent: angular.element(document.body),
      targetEvent: event,
       clickOutsideToClose: true,

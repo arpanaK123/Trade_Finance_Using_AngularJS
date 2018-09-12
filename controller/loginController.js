@@ -12,9 +12,12 @@ app.controller('loginCtrl', function($scope, $state, $location, UserService, toa
       console.log(response.data.status);
       console.log(response.data.statusCode);
       $scope.alluserInfo = response;
-      console.log("alluserInfo--->"+$scope.alluserInfo);
       console.log('JSON response: ', response);
       console.log("Data response: -->"+response.data.usermodel.name);
+      //localstorage.setItem("data",response);
+     //window.localStorage.setItem("data", JSON.stringify(response));
+      // $scope.data= JSON.parse(localStorage.getItem("data"));
+    // console.log("local storage: "+data);
         $location.path('/home');
      toastr.success('login successfully', 'user');
     },function result(res){
