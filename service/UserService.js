@@ -53,29 +53,43 @@ app.factory('UserService', function($http) {
 
     serviceobj.createContract = function(data,url) {
       console.log(data);
-      return $http({
-        method : "POST",
+      let options = {
         headers:{
-          "Content-Type":"application/json"
-         //Authorization: token
-        },
-        url : url,
-        data:data
-      })
+          "Content-Type":"application/json",
+          "token":JSON.parse(localStorage.getItem("token"))
+        }
+      }
+      return $http.post(url, data, options);
     }
 
-    serviceobj.getBalanceBy = function(data,url) {
-      console.log(data);
-      return $http({
-        method : "POST",
+    serviceobj.getAllContract = function(url) {
+      let options = {
         headers:{
-          "Content-Type":"application/json"
-        },
-        url : url,
-        data:data
-      })
+          'Content-Type': 'application/json',
+          "token":JSON.parse(localStorage.getItem("token"))
+        }
+      }
+      return $http.post(url,{}, options);
+    }
+    serviceobj.getBalanceBy = function(url) {
+      let options = {
+        headers:{
+          'Content-Type': 'application/json',
+          "token":JSON.parse(localStorage.getItem("token"))
+        }
+      }
+      return $http.post(url,{}, options);
     }
 
+    serviceobj.updateContractByToken = function(url) {
+      let options = {
+        headers:{
+          'Content-Type': 'application/json',
+          "token":JSON.parse(localStorage.getItem("token"))
+        }
+      }
+      return $http.post(url,{}, options);
+    }
     serviceobj.getContractBy = function(data,url) {
       console.log(data);
       return $http({

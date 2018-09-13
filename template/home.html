@@ -1,97 +1,90 @@
 <div class="app-header">
   <toolbar></toolbar>
 </div>
-<!-- <div class="app-body">
-  <div class="side-bar">
-    <sideBar></sideBar>
+<div class="home-wizard">
+  <div class="contract-btn">
+    <div layout="row">
+      <div class="btn-wrapper">
+        <md-button class="md-fab md-primary md-hue-2" aria-label="Profile" ng-click="onCreateContract($event)">
+          <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_account_circle_48px.svg">
+          </md-icon>
+        </md-button>
+      </div>
+      <div class="btn-wrapper">
+        <md-button class="md-fab md-primary md-hue-2" aria-label="Profile" ng-click="onClickAllContract($event)">
+          <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_supervisor_account_48px.svg"></md-icon>
+        </md-button>
+      </div>
+      <div class="btn-wrapper">
+        <md-button class="md-fab md-primary md-hue-2" aria-label="Profile" ng-click="onClickCurrentTransaction($event)">
+          <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_assignment_return_48px.svg"></md-icon>
+        </md-button>
+      </div>
+      <div class="btn-wrapper">
+        <md-button class="md-fab md-primary md-hue-2" aria-label="Profile">
+          <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_assignment_turned_in_48px.svg"></md-icon>
+        </md-button>
+      </div>
+      <div class="btn-wrapper">
+        <md-button class="md-fab md-primary md-hue-2" aria-label="Profile" ng-click="showCurrentBalance($event)">
+          <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_account_balance_48px.svg"></md-icon>
+        </md-button>
+      </div>
+    </div>
+    <div class="btn-name-label">
+      <p class="label-text">Create Contract</p>
+      <p class="label-text"> All Contract</p>
+      <p class="label-text">Current Transaction</p>
+      <p class="label-text">All Transaction</p>
+      <p class="label-text">Current Balance</p>
+    </div>
   </div>
-  <div class="app-dashboard" ng-class="{resize:isSidebarOpen}">
-    <ui-view></ui-view>
+  <div layout="row" class="login-info" layout-wrap layout-align="center">
+    <md-card>
+        <h4 class="login-user-header">User Details</h4>
+      <md-card-content layout="column" layout-align="center center">
+        <div class="card-usermodel" style="margin-top: -28px;">
+          <div class="user-model-info">
+            <label class="info-label">Name</label>
+            <p class="info-semibold">:&ensp;{{loginUserData.name}}</p>
+          </div>
+          <div class="user-model-info">
+            <label class="info-label">Role</label>
+            <p class="info-semibold">:&ensp;{{loginUserData.role}}</p>
+          </div>
+          <div class="user-model-info">
+            <label class="info-label">Bank Name</label>
+            <p class="info-semibold">:&ensp;{{loginUserData.bankname}}</p>
+          </div>
+          <div class="user-model-info">
+            <label class="info-label">Acc No</label>
+            <p class="info-semibold">:&ensp;{{loginUserData.accountnumber}}</p>
+          </div>
+
+        </div>
+      </md-card-content>
+    </md-card>
   </div>
-</div> -->
-<div class="app-userDetails">
-  <ui-view></ui-view>
 </div>
 
-<div class="app-body">
-<div class="side-bar">
-    <sideBar></sideBar>
+<div class="transaction-progress" ng-if="isCurentTransaction">
+  <div class="progress-icon exporter">
+    <span class="progress-label">Exporter</span>
   </div>
-<div  class="app-dashboard">
-    <ui-view></ui-view>
-  
-  <h3></h3> 
-  <a href="#!/createContract" class="btn btn-link">CREATE CONTRACT</a>
-
-  <!-- <md-button  ng-click="submit()" class="md-raised md-primary ">&nbsp CREATE &nbsp</md-button> -->
-  <!-- <md-button  ng-click="submit()" class="md-raised md-primary ">&nbsp view all contract &nbsp
-  </md-button> -->
-  <!-- <md-button  ng-click="submit()" class="md-raised md-primary ">&nbsp VIEW &nbsp
-        </md-button> -->
-</div>
-<br>
-<div>
-    <md-button  ng-click="submit()" class="md-raised md-primary md-primary-left ">&nbsp view_all_Contract &nbsp
-      </md-button>
-</div>
-<br>
-<div>
-  <md-button  ng-click="submit()" class="md-raised md-primary ">&nbsp Current_Balance &nbsp</md-button>
-</div>
-<br>
-<div>
-  <md-button  ng-click="submit()" class="md-raised md-primary ">&nbsp Current_Transaction &nbsp</md-button>
-</div>
-<!-- <div>
-<h3>Create Contract</h3>
-<md-button  ng-click="submit()" class="md-raised md-primary ">&nbsp CREATE &nbsp
-</md-button>
-<md-button  ng-click="submit()" class="md-raised md-primary ">&nbsp view all contract &nbsp
-</md-button>
-</div>
-</div>
-<br> -->
-<!-- <div> -->
-  <!-- <h4>Upload File</h5> -->
-   <!-- <md-icon md-svg-icon="bower_components/material-design-icons/action/svg/design/ic_swap_vert_48px.svg">   -->
-  <!-- <md-button  ng-click="submit()" class="md-raised md-primary ">&nbsp Upload File &nbsp -->
-    <!-- </md-button> -->
-    <!-- <md-button  ng-click="submit()" class="md-raised md-primary ">&nbsp Upload File &nbsp -->
-      <!-- </md-button> -->
-<!-- </div> -->
-<!-- <div>
- <h5>Exporter</h5>
-  <md-icon md-svg-icon=" bower_components/material-design-icons/action/svg/design/ic_accessibility_48px.svg" />
-  <md-icon md-svg-icon="bower_components/material-design-icons/action/svg/design/ic_accessible_48px.svg"/>
-
-</div> -->
-<br></br>
-<br>
-<div layout="row">
-    <md-button class="md-primary md-fab md-fab-left">
-      exporter
-    </md-button>
-    <md-button class="md-primary md-fab md-fab-left">
-      custom
-    </md-button>
-    <md-button class="md-primary md-fab md-fab-left">
-      insurance
-    </md-button>
-    <md-button class="md-primary md-fab md-fab-left">
-      importer
-    </md-button>
-    <md-button class="md-primary md-fab md-fab-left">
-      importer_Bank
-    </md-button>
+  <span class="connector"></span>
+  <div class="progress-icon" ng-click="onSelectItem('custom')">
+    <span class="progress-label">Custom</span>
   </div>
-
-
-  <div class="container">
-      <ul class="progressbar">
-          <li class="active">exporter</li>
-          <li>custom</li>
-          <li>insurance</li>
-          <li>importer</li>
-          <li>importer_Bank</li>
-
-  </ul>
+  <span class="connector"></span>
+  <div class="progress-icon" ng-click="onSelectItem('insurance')">
+    <span class="progress-label">Insurance</span>
+  </div>
+  <span class="connector"></span>
+  <div class="progress-icon" ng-click="onSelectItem('importerBank')">
+    <span class="progress-label">ImporterBank</span>
+  </div>
+  <span class="connector"></span>
+  <div class="progress-icon" ng-click="onSelectItem('importer')">
+    <span class="progress-label"></span>Importer</span>
+  </div>
+</div>

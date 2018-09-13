@@ -13,15 +13,14 @@ app.controller('loginCtrl', function($scope, $state, $location, UserService, toa
       console.log(response.data.statusCode);
       $scope.alluserInfo = response;
       console.log('JSON response: ', response);
-      console.log("Data response: -->"+response.data.usermodel.name);
-      //localstorage.setItem("data",response);
-     //window.localStorage.setItem("data", JSON.stringify(response));
-      // $scope.data= JSON.parse(localStorage.getItem("data"));
-    // console.log("local storage: "+data);
+      console.log("usermodel -->"+response.data.usermodel);
+      var userModel = JSON.stringify(response.data.usermodel);
+      var token = JSON.stringify(response.data.generateTokens);
+      localStorage.setItem('userData', userModel);
+      localStorage.setItem('token', token);
         $location.path('/home');
      toastr.success('login successfully', 'user');
     },function result(res){
-      console.log(res);
       toastr.error('user is not active', 'user');
     });
   };

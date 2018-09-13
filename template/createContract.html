@@ -1,6 +1,6 @@
 <div class="contract-page">
-    <md-content layout="row" layout-align="space-around" layout-padding="layout-padding" class="contract-form">
-      <md-card flex="flex" flex-gt-sm="50" flex-gt-md="33">
+    <md-content layout="row"  class="contract-form">
+      <md-card style="width: 450px;">
         <md-toolbar>
           <div class="md-toolbar-tools">
             <h2><span>Contract Form</span></h2>
@@ -9,14 +9,14 @@
         <md-card-content>
           <form name="contractForm">
             <md-input-container class="md-block">
-              <label>Enter Contract_Id</label>
-              <input type="text" name="contractId" ng-model="contractId" placeholder="enter contract_id" required/>
+              <label>Enter Contract Id</label>
+              <input type="text" name="contractId" ng-model="contractId" placeholder="Enter contract id" required/>
               <div ng-messages="contractForm.contractId.$error">
-                <div ng-message="required">Contract_Id Required</div>
+                <div ng-message="required">Contract Id Required</div>
               </div>
             </md-input-container>
             <md-input-container class="md-block">
-              <label>Enter Contract_Description</label>
+              <label>Enter Contract Description</label>
               <input type="text" name="contentDescription" ng-model="contentDescription" placeholder="enter contract_description" required/>
               <div ng-messages="contractForm.contentDescription.$error">
                 <div ng-message="required">Contract Description Required</div>
@@ -78,7 +78,7 @@
                     <div ng-message="required">Port_Of_Entry Required</div>
                   </div>
                 </md-input-container>
-            <md-button ng-disabled="!contractForm.$valid" ng-click="submit()" class="md-raised md-primary ">&nbsp CREATE &nbsp
+            <md-button ng-disabled="!contractForm.$valid" ng-click="onSubmitContract()" class="md-raised md-primary ">&nbsp CREATE &nbsp
             </md-button>
           </form>
         </md-card-content>

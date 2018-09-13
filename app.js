@@ -28,27 +28,6 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
       templateUrl: 'template/resetpassword.html',
       controller: 'resetpasswordCtrl'
     })
-    .state('createContract', {
-      url: '/createContract',
-      templateUrl: 'template/createContract.html',
-      controller: 'contractCtrl'
-    })
 
-     .state('getContractById', {
-      url: '/getContractBy',
-      templateUrl: 'template/getContractBy.html',
-      controller: 'contractCtrl'
-    })
-    .state('updateContractByToken', {
-      url: '/updateContractByToken',
-      templateUrl: 'template/updateContract.html',
-      controller: 'contractCtrl'
-    })
-
-    .state('home.dashBoard', {
-      url: '/dashBoard',
-      templateUrl: 'template/dashBoard.html',
-      controller: 'dashboardController'
-    });
   $urlRouterProvider.otherwise('/login');
 }]);
