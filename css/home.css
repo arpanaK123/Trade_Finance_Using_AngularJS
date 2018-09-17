@@ -83,31 +83,16 @@
     width: 103px;
     height: 51px;
     }
-    .exporter, .accepted {
+    .exporter, .accepted {      
         cursor: default;
         background-color: skyblue;
         color: white;
     }
-  .custom{
-      cursor: default;
-      background-color:  skyblue;
-      color: white;
-  }
-  .insurance{
-      cursor: default;
-      background-color: skyblue;
-      color: white;
-  }
-  .importer{
+    .accepted{
       cursor:default;
       background-color: skyblue;
-      color: white;
-  }
-  .importerBank{
-    cursor: default;
-    background-color: skyblue;
-    color: white;
-  }
+      color:white;
+    }
     table, th , td  {
       border: 1px solid grey;
       border-collapse: collapse;
@@ -126,3 +111,7 @@
     color: white;
     border-radius: 5px;
     }
+    /* .rejected {
+      background-color: red;
+      color: white;
+    } */
