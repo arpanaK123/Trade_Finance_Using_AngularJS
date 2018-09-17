@@ -81,14 +81,15 @@ app.factory('UserService', function($http) {
       return $http.post(url,{}, options);
     }
 
-    serviceobj.updateContractByToken = function(url) {
+    serviceobj.updateContractByToken = function(data, url) {
       let options = {
         headers:{
           'Content-Type': 'application/json',
           "token":JSON.parse(localStorage.getItem("token"))
         }
       }
-      return $http.post(url,{}, options);
+  
+      return $http.post(url,data, options);
     }
     serviceobj.getContractBy = function(data,url) {
       console.log(data);

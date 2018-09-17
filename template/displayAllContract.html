@@ -1,4 +1,4 @@
-<div class="contract-page">
+<!-- <div class="contract-page">
   <ul>
     <li class="contract-list" ng-repeat="contract in data">
         <div class="user-model-info">
@@ -56,4 +56,45 @@
 
     </li>
   </ul>
+</div> -->
+<div class="contract-page">
+    <table>
+
+        <!-- <td>{{ $index + 1 }}</td> -->
+        <tr>
+            <th>contract Id</th>
+            <th>Contract Descr.</th>
+            <th>Contract Money</th>
+            <th>Exporter Id</th>
+            <th>Importer Id</th>
+            <th>ImporterBank Id</th>
+            <th>Insurance Id</th>
+            <th>Custom Id</th>
+            <th>Exporter Check</th>
+            <th>Custom Check</th>
+            <th>Insurance Check</th>
+            <th>Importer Check</th>
+            <th>ImporterBank Check</th>
+        </tr>
+
+        <tr class="contract-list" ng-repeat="contract in data">">
+            <td>{{ contract.contractId }}</td>
+            <td>{{ contract.contentDescription }}</td>
+            <td>{{ contract.contractMoney}}</td>
+            <td>{{ contract.exporterId}}</td>
+            <td>{{ contract.importerId}}</td>
+            <td>{{ contract.importerBankId}}</td>
+            <td>{{ contract.insuranceId}}</td>
+            <td>{{ contract.customId}}</td>
+            <td> <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_assignment_turned_in_48px.svg"==='true'></md-icon>{{ contract.exporterCheck}}</td>
+            <td>{{ contract.customCheck}}</td>
+            <td>{{ contract.insuranceCheck}}</td>
+            <td>{{ contract.importerCheck}}</td>
+            <td>{{ contract.importerBankCheck}}</td>
+        </tr>
+
+    </table>
+
 </div>
+<!-- //processing icon -->
+<!-- <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_autorenew_48px.svg"></md-icon> -->

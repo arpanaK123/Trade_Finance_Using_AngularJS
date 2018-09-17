@@ -83,8 +83,46 @@
     width: 103px;
     height: 51px;
     }
-    .exporter {
+    .exporter, .accepted {
         cursor: default;
         background-color: skyblue;
         color: white;
+    }
+  .custom{
+      cursor: default;
+      background-color:  skyblue;
+      color: white;
+  }
+  .insurance{
+      cursor: default;
+      background-color: skyblue;
+      color: white;
+  }
+  .importer{
+      cursor:default;
+      background-color: skyblue;
+      color: white;
+  }
+  .importerBank{
+    cursor: default;
+    background-color: skyblue;
+    color: white;
+  }
+    table, th , td  {
+      border: 1px solid grey;
+      border-collapse: collapse;
+      padding: 5px;
+    }
+    table tr:nth-child(odd) {
+      background-color: #f1f1f1;
+    }
+    table tr:nth-child(even) {
+      background-color: #ffffff;
+    }
+    .contract-status {
+      font-size: 12px;
+    background-color: green;
+    padding: 1px 5px;
+    color: white;
+    border-radius: 5px;
     }

@@ -1,0 +1,44 @@
+<div class="contract-page">
+        <table>
+    
+            <!-- <td>{{ $index + 1 }}</td> -->
+            <tr>
+                <!-- <th> Id</th> -->
+                <th>Contract Descr.</th>
+                <th>View</th>
+                <th>Contract Money</th>
+                <th>Exporter Id</th>
+                <th>Importer Id</th>
+                <th>ImporterBank Id</th>
+                <th>Insurance Id</th>
+                <th>Custom Id</th>
+                <th>Exporter Check</th>
+                <th>Custom Check</th>
+                <th>Insurance Check</th>
+                <th>Importer Check</th>
+                <th>ImporterBank Check</th>
+            </tr>
+    
+            <tr class="contract-list" ng-repeat="contract in data">
+                    <td>{{ $index + 1 }}</td>
+                <!-- <td>{{ contract.contractId }}</td> -->
+                <td>{{ contract.contentDescription }}</td>
+                <td><md-button ng-disabled="!contractForm.$valid" ng-click="submit()" class="md-raised md-primary ">&nbsp view &nbsp
+                    </md-button></td>
+                <td>{{ contract.contractMoney}}</td>
+                <td>{{ contract.exporterId}}</td>
+                <td>{{ contract.importerId}}</td>
+                <td>{{ contract.importerBankId}}</td>
+                <td>{{ contract.insuranceId}}</td>
+                <td>{{ contract.customId}}</td>
+                <td> <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_done_48px.svg"></md-icon></td>
+                <td>{{ contract.exporterCheck}}</td>
+                <td>{{ contract.customCheck}}</td>
+                <td>{{ contract.insuranceCheck}}</td>
+                <td>{{ contract.importerCheck}}</td>
+                <td>{{ contract.importerBankCheck}}</td>
+            </tr>
+    
+        </table>
+    
+    </div>
