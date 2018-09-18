@@ -59,42 +59,72 @@
 </div> -->
 <div class="contract-page">
     <table>
-        <h4 class="login-user-header">Contract Details</h4>
+        <!-- <h4 class="login-user-header">Contract Details</h4> -->
         <tr>
             <th> Id</th>
             <th> Description</th>
             <th>Money</th>
+            <th>Loading</th>
+            <th>Entry</th>
             <th>ExporterId</th>
             <th>ImporterId</th>
             <th>ImporterBankId</th>
             <th>InsuranceId</th>
             <th>CustomId</th>
-            <th>Exporter</th>
-            <th>Custom</th>
-            <th>Insurance</th>
-            <th>Importer</th>
-            <th>ImporterBank</th>
+            <th>ExporterCheck</th>
+            <th>Custom Check</th>
+            <th>Insurance Check</th>
+            <th>Importer Check</th>
+            <th>ImporterBank Check</th>
         </tr>
 
         <tr class="contract-list" ng-repeat="contract in data">
             <td>{{ contract.contractId }}</td>
             <td>{{ contract.contentDescription }}</td>
             <td>{{ contract.contractMoney}}</td>
+            <td>{{ contract.portOfLoadin}}</td>
+            <td>{{ contract.portOfEntry}}</td>
             <td>{{ contract.exporterId}}</td>
             <td>{{ contract.importerId}}</td>
             <td>{{ contract.importerBankId}}</td>
             <td>{{ contract.insuranceId}}</td>
             <td>{{ contract.customId}}</td>
-            <td>{{ contract.exporterCheck}}</td>
-            <td>{{ contract.customCheck}}</td>
-            <td>{{ contract.insuranceCheck}}</td>
-            <td>{{ contract.importerCheck}}</td>
-            <td>{{ contract.importerBankCheck}}</td>
+            <td ng-if="contract.exporterCheck==true">
+                <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_done_48px.svg"></md-icon>
+            </td>
+
+            <td ng-if="contract.customCheck==true">
+                <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_done_48px.svg"></md-icon>
+            </td>
+            <td ng-if="contract.customCheck==false">
+                <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_autorenew_48px.svg"></md-icon>
+            </td>
+            <td ng-if="contract.insuranceCheck==true">
+                <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_done_48px.svg"></md-icon>
+            </td>
+            <td ng-if="contract.insuranceCheck==false">
+                <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_autorenew_48px.svg"></md-icon>
+            </td>
+            <td ng-if="contract.importerCheck==true">
+                <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_done_48px.svg"></md-icon>
+            </td>
+            <td ng-if="contract.importerCheck==false">
+                <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_autorenew_48px.svg"></md-icon>
+            </td>
+            <td ng-if="contract.importerBankCheck==true">
+                <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_done_48px.svg"></md-icon>
+            </td>
+            <td ng-if="contract.importerBankCheck==false">
+                <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_autorenew_48px.svg"></md-icon>
+            </td>
+            <td ng-if="isImporterBank==false">
+                <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_highlight_off_48px.svg"></md-icon>
+            </td>
         </tr>
 
     </table>
 
 </div>
 
-<!-- <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_autorenew_48px.svg"></md-icon> -->
-<!-- <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_assignment_turned_in_48px.svg"></md-icon> -->
+
+<!-- bower_components/material-design-icons/action/svg/design/ic_highlight_off_48px.svg -->

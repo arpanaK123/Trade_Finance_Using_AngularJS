@@ -5,25 +5,19 @@
     <div class="contract-btn">
         <div layout="row">
             <div class="btn-wrapper">
-                <md-button class="md-fab md-primary md-hue-2" aria-label="Profile"
-                           ng-click="onCreateContract($event)">
-                    <md-icon
-                            md-svg-src="bower_components/material-design-icons/action/svg/design/ic_account_circle_48px.svg">
+                <md-button class="md-fab md-primary md-hue-2" aria-label="Profile" ng-click="onCreateContract($event)">
+                    <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_account_circle_48px.svg">
                     </md-icon>
                 </md-button>
             </div>
             <div class="btn-wrapper">
-                <md-button class="md-fab md-primary md-hue-2" aria-label="Profile"
-                           ng-click="onClickAllContract($event)">
-                    <md-icon
-                            md-svg-src="bower_components/material-design-icons/action/svg/design/ic_supervisor_account_48px.svg"></md-icon>
+                <md-button class="md-fab md-primary md-hue-2" aria-label="Profile" ng-click="onClickAllContract($event)">
+                    <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_supervisor_account_48px.svg"></md-icon>
                 </md-button>
             </div>
             <div class="btn-wrapper">
-                <md-button class="md-fab md-primary md-hue-2" aria-label="Profile"
-                           ng-click="onClickCurrentTransaction($event)">
-                    <md-icon
-                            md-svg-src="bower_components/material-design-icons/action/svg/design/ic_assignment_return_48px.svg"></md-icon>
+                <md-button class="md-fab md-primary md-hue-2" aria-label="Profile" ng-click="onClickCurrentTransaction($event)">
+                    <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_assignment_return_48px.svg"></md-icon>
                 </md-button>
             </div>
             <!-- <div class="btn-wrapper">
@@ -32,10 +26,8 @@
               </md-button>
             </div> -->
             <div class="btn-wrapper">
-                <md-button class="md-fab md-primary md-hue-2" aria-label="Profile"
-                           ng-click="showCurrentBalance($event)">
-                    <md-icon
-                            md-svg-src="bower_components/material-design-icons/action/svg/design/ic_account_balance_48px.svg"></md-icon>
+                <md-button class="md-fab md-primary md-hue-2" aria-label="Profile" ng-click="showCurrentBalance($event)">
+                    <md-icon md-svg-src="bower_components/material-design-icons/action/svg/design/ic_account_balance_48px.svg"></md-icon>
                 </md-button>
             </div>
         </div>
@@ -75,35 +67,43 @@
     </div>
 </div>
 
+
+<div>
+<div ng-controller="homeCtrl">
+    <input type="file" ng-file-select="onSelectFile($files)">
+</div>
+<div ng-controller="homeCtrl">
+    <input type="file" ng-file-select="onSelectFile($files)">
+</div>
+</div>
+
+
+
 <div class="transaction-progress" ng-if="isCurentTransaction">
     <div class="progress-icon exporter">
         <span class="progress-label">Exporter</span>
     </div>
     <span class="connector"></span>
-    <div class="progress-icon"
-         ng-class="{'accepted': updateContractRes.customCheck === true, 'rejected': updateContractRes.customCheck === false}"
-         ng-click="onSelectItem('custom','customCheck')">
+    <div class="progress-icon" ng-class="{'accepted': isCustom === true, 'rejected': isCustom === false}"
+        ng-click="onSelectItem('custom','customCheck')">
         <span class="progress-label"> Custom</span>
         <!-- <label class="contract-status">{{'Accepted'}}</label> -->
     </div>
     <span class="connector"></span>
-    <div class="progress-icon"
-         ng-class="{'accepted': updateContractRes.insuranceCheck === true, 'rejected': updateContractRes.insuranceCheck === false}"
-         ng-click="onSelectItem('insurance','insuranceCheck')">
+    <div class="progress-icon" ng-class="{'accepted': isInsurance === true, 'rejected': isInsurance === false}"
+        ng-click="onSelectItem('insurance','insuranceCheck')">
         <span class="progress-label">Insurance</span>
         <!-- <label class="contract-status">{{'Accepted'}}</label> -->
     </div>
     <span class="connector"></span>
-    <div class="progress-icon"
-         ng-class="{'accepted': updateContractRes.importerCheck === true, 'rejected': updateContractRes.importerCheck === false}"
-         ng-click="onSelectItem('importer','importerCheck')">
+    <div class="progress-icon" ng-class="{'accepted': isImporter === true, 'rejected': isImporter === false}"
+        ng-click="onSelectItem('importer','importerCheck')">
         <span class="progress-label"></span>Importer</span>
         <!-- <label class="contract-status">{{'Accepted'}}</label> -->
     </div>
     <span class="connector"></span>
-    <div class="progress-icon"
-         ng-class="{'accepted': updateContractRes.importerBankCheck === true, 'rejected': updateContractRes.importerBankCheck === false}"
-         ng-click="onSelectItem('importerBank','importerBankCheck')">
+    <div class="progress-icon" ng-class="{'accepted': isImporterBank === true, 'rejected': isImporterBank === false}"
+        ng-click="onSelectItem('importerBank','importerBankCheck')">
         <span class="progress-label">ImporterBank</span>
         <!-- <label class="contract-status">{{'Accepted'}}</label> -->
     </div>

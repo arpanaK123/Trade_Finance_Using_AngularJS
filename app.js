@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ui.router', 'ngMaterial','toastr']);
+var app = angular.module('app', ['ui.router', 'ngMaterial','toastr','naif.base64']);
 
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
   $stateProvider

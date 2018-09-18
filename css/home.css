@@ -7,6 +7,12 @@
   margin-top: 0px;
   padding: 12px;
 }
+/* .upload-user-header{
+  text-align: center;
+  background-color: skyblue;
+  margin-top: 0px;
+  padding: 12px;
+} */
 .user-model-info {
     display: flex;
     font-family: 'Open Sans', sans-serif;;
@@ -111,7 +117,7 @@
     color: white;
     border-radius: 5px;
     }
-    /* .rejected {
+    .rejected {
       background-color: red;
       color: white;
-    } */
+    }
